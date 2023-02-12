@@ -16,3 +16,4 @@ while True:
         minNeighbors=5,  # specify how many neighbors each candidate rectangle should have
         minSize=(100, 100)  # specify the minimum rectangle size to be detected as a face
     )
+
