@@ -17,3 +17,16 @@ while True:
         minSize=(100, 100)  # specify the minimum rectangle size to be detected as a face
     )
 
+    for (x, y, w, h) in faces:  # for every face detected
+        cv2.rectangle(img, (x, y), (x + w, y + h), (255, 0, 0), 2)  # draw a rectangle
+
+        cv2.imshow('video', img)
+
+    k = cv2.waitKey(30) & 0xff
+    if k == 27:  # press 'ESC' to quit
+        break
+
+# cleanup
+print("\n [INFO] Exiting Program and cleanup stuff")
+cap.release()
+cv2.destroyAllWindows()
